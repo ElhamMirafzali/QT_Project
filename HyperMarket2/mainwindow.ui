@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>685</width>
+    <height>379</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>هایپر روت (بدون فعالسازی)</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>نام کاربر:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Admin</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ExitButton">
+        <property name="text">
+         <string>خروج</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>هایپرروت</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>صدور فاکتور</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="text">
+            <string>قیمت گذاری فروش کالا</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string>ارسال کالا به فروشگاه</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="text">
+            <string>ماشین حساب</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCalendarWidget" name="calendarWidget">
+          <property name="gridVisible">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QCalendarWidget::SingleSelection</enum>
+          </property>
+          <property name="horizontalHeaderFormat">
+           <enum>QCalendarWidget::ShortDayNames</enum>
+          </property>
+          <property name="verticalHeaderFormat">
+           <enum>QCalendarWidget::NoVerticalHeader</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>گزارشات</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>کالاهایی که ارسال شده ولی به مقصد نرسیده</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="listView_3"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>کالاهایی که موجودی آنها رو به اتمام است</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="listView_2"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>فروش روزانه</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeView" name="treeView"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>685</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="Reports">
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="title">
+     <string>گزارشات</string>
+    </property>
+    <widget class="QMenu" name="menu_13">
+     <property name="title">
+      <string>               فروش</string>
+     </property>
+     <widget class="QMenu" name="menu_14">
+      <property name="title">
+       <string>     پر فروش ترین</string>
+      </property>
+      <addaction name="BestStuff"/>
+      <addaction name="BestStuffGroup"/>
+     </widget>
+     <widget class="QMenu" name="menu_15">
+      <property name="title">
+       <string>          سود خالص</string>
+      </property>
+      <addaction name="DailyInterest"/>
+      <addaction name="MonthlyInterest"/>
+      <addaction name="YearlyIntrest"/>
+     </widget>
+     <addaction name="DailySale_2"/>
+     <addaction name="menu_14"/>
+     <addaction name="menu_15"/>
+    </widget>
+    <widget class="QMenu" name="menu_16">
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="title">
+      <string>                 انبار</string>
+     </property>
+     <addaction name="StuffSuplyment"/>
+     <addaction name="StuffCardText"/>
+     <addaction name="ZeroSuplyment"/>
+    </widget>
+    <widget class="QMenu" name="menu_19">
+     <property name="title">
+      <string>                 خرید</string>
+     </property>
+     <addaction name="SeeinfBuyFactor"/>
+    </widget>
+    <addaction name="menu_16"/>
+    <addaction name="menu_13"/>
+    <addaction name="menu_19"/>
+   </widget>
+   <widget class="QMenu" name="Setting">
+    <property name="title">
+     <string>تنظیمات</string>
+    </property>
+    <addaction name="UserDefine"/>
+   </widget>
+   <widget class="QMenu" name="Store">
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="title">
+     <string>انبار</string>
+    </property>
+    <widget class="QMenu" name="menu_9">
+     <property name="title">
+      <string>         معرفی کالا</string>
+     </property>
+     <addaction name="DefineStuffGroup"/>
+     <addaction name="DefineStuff"/>
+     <addaction name="MinimumLevel"/>
+    </widget>
+    <widget class="QMenu" name="menu_12">
+     <property name="title">
+      <string>           ارسال کالا</string>
+     </property>
+     <addaction name="SendStuffToShop"/>
+    </widget>
+    <addaction name="StoreIntro"/>
+    <addaction name="menu_9"/>
+    <addaction name="menu_12"/>
+   </widget>
+   <widget class="QMenu" name="Buying">
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="title">
+     <string>خرید</string>
+    </property>
+    <addaction name="BuyList"/>
+    <addaction name="buyinAgencyDefine"/>
+    <addaction name="BuyOrder"/>
+    <addaction name="EnterBuyFactor"/>
+   </widget>
+   <widget class="QMenu" name="Selling">
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="title">
+     <string>فروش</string>
+    </property>
+    <addaction name="LabelPrint"/>
+    <addaction name="SearchFactor"/>
+    <addaction name="separator"/>
+    <addaction name="Factor"/>
+   </widget>
+   <widget class="QMenu" name="AboutUs">
+    <property name="title">
+     <string>درباره ما</string>
+    </property>
+    <addaction name="aboutUs"/>
+   </widget>
+   <widget class="QMenu" name="Manage">
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="title">
+     <string>مدیریت</string>
+    </property>
+    <widget class="QMenu" name="menu_20">
+     <property name="title">
+      <string>                            پرسنل</string>
+     </property>
+     <addaction name="StaffIntro"/>
+    </widget>
+    <addaction name="PricingGoodsForm"/>
+    <addaction name="accountIntro"/>
+    <addaction name="separator"/>
+    <addaction name="menu_20"/>
+   </widget>
+   <addaction name="Manage"/>
+   <addaction name="Reports"/>
+   <addaction name="Store"/>
+   <addaction name="Buying"/>
+   <addaction name="Selling"/>
+   <addaction name="Setting"/>
+   <addaction name="AboutUs"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="StoreIntro">
+   <property name="text">
+    <string>   معرفی انبار ها</string>
+   </property>
+  </action>
+  <action name="PricingGoodsForm">
+   <property name="text">
+    <string> قیمت گذاری فروش کالا</string>
+   </property>
+  </action>
+  <action name="DefineStuffGroup">
+   <property name="text">
+    <string>                 معرفی گروه های کالا</string>
+   </property>
+  </action>
+  <action name="accountIntro">
+   <property name="text">
+    <string>               معرفی حساب</string>
+   </property>
+  </action>
+  <action name="MinimumLevel">
+   <property name="text">
+    <string>تعیین حداقل سطح موجودی کالا</string>
+   </property>
+  </action>
+  <action name="DailySale_2">
+   <property name="text">
+    <string>       فروش روزانه</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="text">
+    <string>کالا</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>گروه کالا</string>
+   </property>
+  </action>
+  <action name="DailySale">
+   <property name="text">
+    <string>روزانه</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>ماهانه</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>سالانه</string>
+   </property>
+  </action>
+  <action name="UserDefine">
+   <property name="text">
+    <string>         معرفی کاربران</string>
+   </property>
+  </action>
+  <action name="SendStuffToStore">
+   <property name="text">
+    <string>                 به انبار</string>
+   </property>
+  </action>
+  <action name="SendStuffToShop">
+   <property name="text">
+    <string>          به فروشگاه</string>
+   </property>
+  </action>
+  <action name="BestStuff">
+   <property name="text">
+    <string>                      کالا</string>
+   </property>
+  </action>
+  <action name="BestStuffGroup">
+   <property name="text">
+    <string>              گروه کالا</string>
+   </property>
+  </action>
+  <action name="DailyInterest">
+   <property name="text">
+    <string>روزانه</string>
+   </property>
+  </action>
+  <action name="MonthlyInterest">
+   <property name="text">
+    <string>ماهانه</string>
+   </property>
+  </action>
+  <action name="YearlyIntrest">
+   <property name="text">
+    <string>سالانه</string>
+   </property>
+  </action>
+  <action name="StuffSuplyment">
+   <property name="text">
+    <string>                             موجودی کالا</string>
+   </property>
+  </action>
+  <action name="StuffCardText">
+   <property name="text">
+    <string>                             کاردکس کالا</string>
+   </property>
+  </action>
+  <action name="action_38">
+   <property name="text">
+    <string>            مغایرت های انبار گردانی</string>
+   </property>
+  </action>
+  <action name="action_39">
+   <property name="text">
+    <string>               از انبار</string>
+   </property>
+  </action>
+  <action name="ZeroSuplyment">
+   <property name="text">
+    <string>                           موجودی صفر</string>
+   </property>
+  </action>
+  <action name="buyinAgencyDefine">
+   <property name="text">
+    <string>  معرفی نمایندگی خرید</string>
+   </property>
+  </action>
+  <action name="EnterBuyFactor">
+   <property name="text">
+    <string>           ورود فاکتور خرید</string>
+   </property>
+  </action>
+  <action name="SeeinfBuyFactor">
+   <property name="text">
+    <string>مشاهده فاکتور های خرید</string>
+   </property>
+  </action>
+  <action name="BuyList">
+   <property name="text">
+    <string>                   لیست خرید</string>
+   </property>
+  </action>
+  <action name="BuyOrder">
+   <property name="text">
+    <string>                 سفارش خرید</string>
+   </property>
+  </action>
+  <action name="LabelPrint">
+   <property name="text">
+    <string>         چاپ اتیکت</string>
+   </property>
+  </action>
+  <action name="StaffIntro">
+   <property name="text">
+    <string>         معرفی پرسنل</string>
+   </property>
+  </action>
+  <action name="SearchFactor">
+   <property name="text">
+    <string> جستجوی فاکتور</string>
+   </property>
+  </action>
+  <action name="action_57">
+   <property name="text">
+    <string>               معرفی مشتری</string>
+   </property>
+  </action>
+  <action name="action_58">
+   <property name="text">
+    <string>  وضعیت حساب مشتری</string>
+   </property>
+  </action>
+  <action name="Factor">
+   <property name="text">
+    <string>      صدور فاکتور</string>
+   </property>
+  </action>
+  <action name="aboutUs">
+   <property name="text">
+    <string>            سازندگان</string>
+   </property>
+  </action>
+  <action name="DefineStuff">
+   <property name="text">
+    <string>                                 معرفی کالا</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ExitButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
